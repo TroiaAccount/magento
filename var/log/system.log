@@ -1,0 +1,280 @@
+[2023-04-18T12:11:19.229426+00:00] main.ERROR: Current version of RDBMS is not supported. Used Version: 10.11.2-MariaDB-1. Supported versions: MySQL-8, MySQL-5.7, MariaDB-(10.2-10.6)
+#0 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/DB/Adapter/SqlVersionProvider.php(79): Magento\Framework\DB\Adapter\SqlVersionProvider->getVersionString()
+#1 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/DB/Adapter/SqlVersionProvider.php(134): Magento\Framework\DB\Adapter\SqlVersionProvider->getSqlVersion()
+#2 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Setup/Declaration/Schema/Dto/Factories/Table.php(127): Magento\Framework\DB\Adapter\SqlVersionProvider->isMysqlGte8029()
+#3 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Setup/Declaration/Schema/Dto/Factories/Table.php(97): Magento\Framework\Setup\Declaration\Schema\Dto\Factories\Table->getDefaultCharset()
+#4 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Setup/Declaration/Schema/Dto/ElementFactory.php(88): Magento\Framework\Setup\Declaration\Schema\Dto\Factories\Table->create()
+#5 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Setup/Declaration/Schema/Declaration/SchemaBuilder.php(243): Magento\Framework\Setup\Declaration\Schema\Dto\ElementFactory->create()
+#6 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Setup/Declaration/Schema/Declaration/SchemaBuilder.php(150): Magento\Framework\Setup\Declaration\Schema\Declaration\SchemaBuilder->processTable()
+#7 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Setup/Declaration/Schema/SchemaConfig.php(78): Magento\Framework\Setup\Declaration\Schema\Declaration\SchemaBuilder->build()
+#8 /home/troia/ApacheSites/magento246.loc/content/setup/src/Magento/Setup/Model/DeclarationInstaller.php(57): Magento\Framework\Setup\Declaration\Schema\SchemaConfig->getDeclarationConfig()
+#9 /home/troia/ApacheSites/magento246.loc/content/setup/src/Magento/Setup/Model/Installer.php(849): Magento\Setup\Model\DeclarationInstaller->installSchema()
+#10 /home/troia/ApacheSites/magento246.loc/content/setup/src/Magento/Setup/Model/Installer.php(897): Magento\Setup\Model\Installer->declarativeInstallSchema()
+#11 [internal function]: Magento\Setup\Model\Installer->installSchema()
+#12 /home/troia/ApacheSites/magento246.loc/content/setup/src/Magento/Setup/Model/Installer.php(388): call_user_func_array()
+#13 /home/troia/ApacheSites/magento246.loc/content/setup/src/Magento/Setup/Console/Command/InstallCommand.php(238): Magento\Setup\Model\Installer->install()
+#14 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Command/Command.php(298): Magento\Setup\Console\Command\InstallCommand->execute()
+#15 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(1040): Symfony\Component\Console\Command\Command->run()
+#16 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(301): Symfony\Component\Console\Application->doRunCommand()
+#17 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#18 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#19 /home/troia/ApacheSites/magento246.loc/content/bin/magento(23): Symfony\Component\Console\Application->run()
+#20 {main} [] []
+[2023-04-18T12:44:57.142778+00:00] main.ERROR: Command "cache:clear" is not defined.
+
+Did you mean one of these?
+    cache:clean
+    cache:disable
+    cache:enable
+    cache:flush
+    cache:status
+#0 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(259): Symfony\Component\Console\Application->find()
+#1 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#2 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#3 /home/troia/ApacheSites/magento246.loc/content/bin/magento(23): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2023-04-18T12:53:04.692949+00:00] main.ERROR: Command "cache:clear" is not defined.
+
+Did you mean one of these?
+    cache:clean
+    cache:disable
+    cache:enable
+    cache:flush
+    cache:status
+#0 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(259): Symfony\Component\Console\Application->find()
+#1 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#2 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#3 /home/troia/ApacheSites/magento246.loc/content/bin/magento(23): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2023-04-18T12:59:00.433012+00:00] main.INFO: Broken reference: the 'tracking' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.433859+00:00] main.INFO: Broken reference: the 'notification_area' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.434488+00:00] main.INFO: Broken reference: the 'unread_system_messages' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.435125+00:00] main.INFO: Broken reference: the 'notification_window' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.435761+00:00] main.INFO: Broken reference: the 'notification.messages' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.436400+00:00] main.INFO: Broken reference: the 'global_notices' element cannot be added as child to 'global.notices', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.437000+00:00] main.INFO: Broken reference: the 'logo' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.437636+00:00] main.INFO: Broken reference: the 'global.search' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.438252+00:00] main.INFO: Broken reference: the 'user' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.439078+00:00] main.INFO: Broken reference: the 'menu' element cannot be added as child to 'page.menu', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.440354+00:00] main.INFO: Broken reference: the 'breadcrumbs' element cannot be added as child to 'page.breadcrumbs', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.440993+00:00] main.INFO: Broken reference: the 'formkey' element cannot be added as child to 'page.formkey', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.441628+00:00] main.INFO: Broken reference: the 'page.title' element cannot be added as child to 'main.top', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.442333+00:00] main.INFO: Broken reference: the 'messages' element cannot be added as child to 'page.messages', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.442950+00:00] main.INFO: Broken reference: the 'page.actions.toolbar' element cannot be added as child to 'page.main.actions', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.443687+00:00] main.INFO: Broken reference: the 'legal' element cannot be added as child to 'footer', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.445171+00:00] main.INFO: Broken reference: the 'header.inner.left' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.447028+00:00] main.INFO: Broken reference: the 'header.inner.right' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-18T12:59:00.447855+00:00] main.INFO: Broken reference: the 'user' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-18T12:59:00.448499+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-18T12:59:00.449118+00:00] main.INFO: Broken reference: the 'logo' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-18T12:59:00.449746+00:00] main.INFO: Broken reference: the 'global.search' tries to reorder itself towards 'logo', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-18T12:59:00.450452+00:00] main.INFO: Broken reference: the 'page.actions.toolbar' tries to reorder itself towards '', but their parents are different: 'page.main.actions' and '' respectively. [] []
+[2023-04-18T12:59:00.451178+00:00] main.INFO: Broken reference: the 'header.inner.left' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-18T12:59:00.452215+00:00] main.INFO: Broken reference: the 'header.inner.right' tries to reorder itself towards 'header.inner.left', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-18T12:59:00.454341+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header.inner.right' and '' respectively. [] []
+[2023-04-18T12:59:37.516838+00:00] main.INFO: Item Magento_Backend::system_currency was removed [] []
+[2023-04-18T12:59:37.528741+00:00] main.INFO: Add of item with id Magento_Config::system_config was processed [] []
+[2023-04-18T12:59:37.530175+00:00] main.INFO: Add of item with id Magento_AdminNotification::system_adminnotification was processed [] []
+[2023-04-18T12:59:37.531780+00:00] main.INFO: Add of item with id Magento_Theme::design_config was processed [] []
+[2023-04-18T12:59:37.533476+00:00] main.INFO: Add of item with id Magento_Theme::system_design_theme was processed [] []
+[2023-04-18T12:59:37.535024+00:00] main.INFO: Add of item with id Magento_Backend::system_design_schedule was processed [] []
+[2023-04-18T12:59:37.535659+00:00] main.INFO: Add of item with id Magento_Backend::system_store was processed [] []
+[2023-04-18T12:59:37.536282+00:00] main.INFO: Add of item with id Magento_Backend::dashboard was processed [] []
+[2023-04-18T12:59:37.536887+00:00] main.INFO: Add of item with id Magento_Backend::system was processed [] []
+[2023-04-18T12:59:37.537539+00:00] main.INFO: Add of item with id Magento_Backend::system_tools was processed [] []
+[2023-04-18T12:59:37.538198+00:00] main.INFO: Add of item with id Magento_Backend::system_design was processed [] []
+[2023-04-18T12:59:37.538967+00:00] main.INFO: Add of item with id Magento_Backend::system_convert was processed [] []
+[2023-04-18T12:59:37.540087+00:00] main.INFO: Add of item with id Magento_Backend::system_cache was processed [] []
+[2023-04-18T12:59:37.540719+00:00] main.INFO: Add of item with id Magento_Backend::marketing was processed [] []
+[2023-04-18T12:59:37.541347+00:00] main.INFO: Add of item with id Magento_Backend::marketing_communications was processed [] []
+[2023-04-18T12:59:37.542021+00:00] main.INFO: Add of item with id Magento_Backend::marketing_seo was processed [] []
+[2023-04-18T12:59:37.542643+00:00] main.INFO: Add of item with id Magento_Backend::marketing_user_content was processed [] []
+[2023-04-18T12:59:37.543239+00:00] main.INFO: Add of item with id Magento_Backend::content was processed [] []
+[2023-04-18T12:59:37.544526+00:00] main.INFO: Add of item with id Magento_Backend::content_elements was processed [] []
+[2023-04-18T12:59:37.546394+00:00] main.INFO: Add of item with id Magento_Backend::stores was processed [] []
+[2023-04-18T12:59:37.547919+00:00] main.INFO: Add of item with id Magento_Backend::stores_settings was processed [] []
+[2023-04-18T12:59:37.548568+00:00] main.INFO: Add of item with id Magento_Backend::stores_attributes was processed [] []
+[2023-04-18T12:59:37.549177+00:00] main.INFO: Add of item with id Magento_Backend::other_settings was processed [] []
+[2023-04-18T12:59:37.549817+00:00] main.INFO: Add of item with id Magento_Backend::system_other_settings was processed [] []
+[2023-04-18T12:59:37.550409+00:00] main.INFO: Add of item with id Magento_User::system_acl was processed [] []
+[2023-04-18T12:59:37.551037+00:00] main.INFO: Add of item with id Magento_User::system_acl_users was processed [] []
+[2023-04-18T12:59:37.551793+00:00] main.INFO: Add of item with id Magento_User::system_acl_roles was processed [] []
+[2023-04-18T12:59:37.552410+00:00] main.INFO: Add of item with id Magento_User::system_acl_locks was processed [] []
+[2023-04-18T12:59:37.553002+00:00] main.INFO: Add of item with id Magento_Customer::customer was processed [] []
+[2023-04-18T12:59:37.553646+00:00] main.INFO: Add of item with id Magento_Customer::customer_manage was processed [] []
+[2023-04-18T12:59:37.554261+00:00] main.INFO: Add of item with id Magento_Customer::customer_online was processed [] []
+[2023-04-18T12:59:37.554877+00:00] main.INFO: Add of item with id Magento_Customer::customer_group was processed [] []
+[2023-04-18T12:59:37.556253+00:00] main.INFO: Add of item with id Magento_Backup::system_tools_backup was processed [] []
+[2023-04-18T12:59:37.557918+00:00] main.INFO: Add of item with id Magento_Indexer::system_index was processed [] []
+[2023-04-18T12:59:37.559253+00:00] main.INFO: Add of item with id Magento_Variable::system_variable was processed [] []
+[2023-04-18T12:59:37.560311+00:00] main.INFO: Add of item with id Magento_Cms::cms_page was processed [] []
+[2023-04-18T12:59:37.561588+00:00] main.INFO: Add of item with id Magento_Cms::cms_block was processed [] []
+[2023-04-18T12:59:37.562391+00:00] main.INFO: Add of item with id Magento_Search::search_terms was processed [] []
+[2023-04-18T12:59:37.563003+00:00] main.INFO: Add of item with id Magento_Search::search_synonyms was processed [] []
+[2023-04-18T12:59:37.563871+00:00] main.INFO: Add of item with id Magento_Catalog::catalog was processed [] []
+[2023-04-18T12:59:37.564555+00:00] main.INFO: Add of item with id Magento_Catalog::catalog_products was processed [] []
+[2023-04-18T12:59:37.565183+00:00] main.INFO: Add of item with id Magento_Catalog::catalog_categories was processed [] []
+[2023-04-18T12:59:37.565821+00:00] main.INFO: Add of item with id Magento_Catalog::catalog_attributes_attributes was processed [] []
+[2023-04-18T12:59:37.566418+00:00] main.INFO: Add of item with id Magento_Catalog::catalog_attributes_sets was processed [] []
+[2023-04-18T12:59:37.567064+00:00] main.INFO: Add of item with id Magento_Catalog::inventory was processed [] []
+[2023-04-18T12:59:37.567702+00:00] main.INFO: Add of item with id Magento_CatalogRule::promo was processed [] []
+[2023-04-18T12:59:37.568336+00:00] main.INFO: Add of item with id Magento_CatalogRule::promo_catalog was processed [] []
+[2023-04-18T12:59:37.568946+00:00] main.INFO: Add of item with id Magento_MediaGalleryUi::media was processed [] []
+[2023-04-18T12:59:37.569577+00:00] main.INFO: Add of item with id Magento_MediaGalleryUi::media_gallery was processed [] []
+[2023-04-18T12:59:37.570188+00:00] main.INFO: Add of item with id Magento_Integration::system_extensions was processed [] []
+[2023-04-18T12:59:37.570832+00:00] main.INFO: Add of item with id Magento_Integration::system_integrations was processed [] []
+[2023-04-18T12:59:37.571840+00:00] main.INFO: Add of item with id Magento_Sales::sales was processed [] []
+[2023-04-18T12:59:37.572582+00:00] main.INFO: Add of item with id Magento_Sales::sales_operation was processed [] []
+[2023-04-18T12:59:37.573236+00:00] main.INFO: Add of item with id Magento_Sales::sales_order was processed [] []
+[2023-04-18T12:59:37.573865+00:00] main.INFO: Add of item with id Magento_Sales::sales_invoice was processed [] []
+[2023-04-18T12:59:37.574487+00:00] main.INFO: Add of item with id Magento_Sales::sales_shipment was processed [] []
+[2023-04-18T12:59:37.575089+00:00] main.INFO: Add of item with id Magento_Sales::sales_creditmemo was processed [] []
+[2023-04-18T12:59:37.575782+00:00] main.INFO: Add of item with id Magento_Sales::sales_transactions was processed [] []
+[2023-04-18T12:59:37.576389+00:00] main.INFO: Add of item with id Magento_Sales::system_order_statuses was processed [] []
+[2023-04-18T12:59:37.577629+00:00] main.INFO: Add of item with id Magento_Widget::cms_widget_instance was processed [] []
+[2023-04-18T12:59:37.578919+00:00] main.INFO: Add of item with id Magento_Analytics::business_intelligence was processed [] []
+[2023-04-18T12:59:37.580117+00:00] main.INFO: Add of item with id Magento_Analytics::advanced_reporting was processed [] []
+[2023-04-18T12:59:37.580788+00:00] main.INFO: Add of item with id Magento_Analytics::bi_essentials was processed [] []
+[2023-04-18T12:59:37.581428+00:00] main.INFO: Add of item with id Magento_Downloadable::report_products_downloads was processed [] []
+[2023-04-18T12:59:37.582081+00:00] main.INFO: Add of item with id Magento_ImportExport::system_convert_import was processed [] []
+[2023-04-18T12:59:37.582681+00:00] main.INFO: Add of item with id Magento_ImportExport::system_convert_export was processed [] []
+[2023-04-18T12:59:37.583305+00:00] main.INFO: Add of item with id Magento_ImportExport::system_convert_history was processed [] []
+[2023-04-18T12:59:37.583970+00:00] main.INFO: Add of item with id Magento_Email::template was processed [] []
+[2023-04-18T12:59:37.584569+00:00] main.INFO: Add of item with id Magento_EncryptionKey::system_crypt_key was processed [] []
+[2023-04-18T12:59:37.585187+00:00] main.INFO: Add of item with id Magento_InventoryAdminUi::inventory was processed [] []
+[2023-04-18T12:59:37.585822+00:00] main.INFO: Add of item with id Magento_InventoryAdminUi::source was processed [] []
+[2023-04-18T12:59:37.586432+00:00] main.INFO: Add of item with id Magento_InventoryAdminUi::stock was processed [] []
+[2023-04-18T12:59:37.587023+00:00] main.INFO: Add of item with id Magento_Reports::report was processed [] []
+[2023-04-18T12:59:37.588074+00:00] main.INFO: Add of item with id Magento_Reports::report_marketing was processed [] []
+[2023-04-18T12:59:37.588695+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot was processed [] []
+[2023-04-18T12:59:37.589438+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot_sales was processed [] []
+[2023-04-18T12:59:37.590135+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot_tax was processed [] []
+[2023-04-18T12:59:37.590824+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot_invoiced was processed [] []
+[2023-04-18T12:59:37.591510+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot_shipping was processed [] []
+[2023-04-18T12:59:37.592243+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot_refunded was processed [] []
+[2023-04-18T12:59:37.593900+00:00] main.INFO: Add of item with id Magento_Reports::report_salesroot_coupons was processed [] []
+[2023-04-18T12:59:37.594708+00:00] main.INFO: Add of item with id Magento_Reports::report_shopcart_product was processed [] []
+[2023-04-18T12:59:37.595772+00:00] main.INFO: Add of item with id Magento_Reports::report_shopcart_abandoned was processed [] []
+[2023-04-18T12:59:37.597467+00:00] main.INFO: Add of item with id Magento_Reports::report_products was processed [] []
+[2023-04-18T12:59:37.599089+00:00] main.INFO: Add of item with id Magento_Reports::report_products_bestsellers was processed [] []
+[2023-04-18T12:59:37.600432+00:00] main.INFO: Add of item with id Magento_Reports::report_products_sold was processed [] []
+[2023-04-18T12:59:37.601096+00:00] main.INFO: Add of item with id Magento_Reports::report_products_viewed was processed [] []
+[2023-04-18T12:59:37.601832+00:00] main.INFO: Add of item with id Magento_Reports::report_products_lowstock was processed [] []
+[2023-04-18T12:59:37.602437+00:00] main.INFO: Add of item with id Magento_Reports::report_customers was processed [] []
+[2023-04-18T12:59:37.603186+00:00] main.INFO: Add of item with id Magento_Reports::report_customers_accounts was processed [] []
+[2023-04-18T12:59:37.604754+00:00] main.INFO: Add of item with id Magento_Reports::report_customers_totals was processed [] []
+[2023-04-18T12:59:37.605809+00:00] main.INFO: Add of item with id Magento_Reports::report_customers_orders was processed [] []
+[2023-04-18T12:59:37.606434+00:00] main.INFO: Add of item with id Magento_Reports::report_statistics was processed [] []
+[2023-04-18T12:59:37.607105+00:00] main.INFO: Add of item with id Magento_Reports::report_statistics_refresh was processed [] []
+[2023-04-18T12:59:37.607738+00:00] main.INFO: Add of item with id Magento_Search::report_search_term was processed [] []
+[2023-04-18T12:59:37.608351+00:00] main.INFO: Add of item with id Magento_LoginAsCustomerLog::login_log was processed [] []
+[2023-04-18T12:59:37.609516+00:00] main.INFO: Add of item with id Magento_Marketplace::partners was processed [] []
+[2023-04-18T12:59:37.611398+00:00] main.INFO: Add of item with id Magento_Newsletter::newsletter_template was processed [] []
+[2023-04-18T12:59:37.612394+00:00] main.INFO: Add of item with id Magento_Newsletter::newsletter_queue was processed [] []
+[2023-04-18T12:59:37.613009+00:00] main.INFO: Add of item with id Magento_Newsletter::newsletter_subscriber was processed [] []
+[2023-04-18T12:59:37.613623+00:00] main.INFO: Add of item with id Magento_Newsletter::newsletter_problem was processed [] []
+[2023-04-18T12:59:37.614216+00:00] main.INFO: Add of item with id Magento_SalesRule::promo_quote was processed [] []
+[2023-04-18T12:59:37.614838+00:00] main.INFO: Add of item with id Magento_Sitemap::catalog_sitemap was processed [] []
+[2023-04-18T12:59:37.615465+00:00] main.INFO: Add of item with id Magento_PageBuilder::templates was processed [] []
+[2023-04-18T12:59:37.616079+00:00] main.INFO: Add of item with id Magento_Paypal::report_salesroot_paypal_settlement_reports was processed [] []
+[2023-04-18T12:59:37.616674+00:00] main.INFO: Add of item with id Magento_Paypal::paypal_billing_agreement was processed [] []
+[2023-04-18T12:59:37.617275+00:00] main.INFO: Add of item with id Magento_CheckoutAgreements::sales_checkoutagreement was processed [] []
+[2023-04-18T12:59:37.617899+00:00] main.INFO: Add of item with id Magento_Review::catalog_reviews_ratings_ratings was processed [] []
+[2023-04-18T12:59:37.618572+00:00] main.INFO: Add of item with id Magento_Review::catalog_reviews_ratings_pending was processed [] []
+[2023-04-18T12:59:37.619633+00:00] main.INFO: Add of item with id Magento_Review::catalog_reviews_ratings_reviews_all was processed [] []
+[2023-04-18T12:59:37.620313+00:00] main.INFO: Add of item with id Magento_Review::report_review was processed [] []
+[2023-04-18T12:59:37.620972+00:00] main.INFO: Add of item with id Magento_Review::report_review_customer was processed [] []
+[2023-04-18T12:59:37.621576+00:00] main.INFO: Add of item with id Magento_Review::report_review_product was processed [] []
+[2023-04-18T12:59:37.622182+00:00] main.INFO: Add of item with id Magento_UrlRewrite::urlrewrite was processed [] []
+[2023-04-18T12:59:37.622787+00:00] main.INFO: Add of item with id Magento_Tax::sales_tax was processed [] []
+[2023-04-18T12:59:37.623433+00:00] main.INFO: Add of item with id Magento_Tax::sales_tax_rules was processed [] []
+[2023-04-18T12:59:37.624048+00:00] main.INFO: Add of item with id Magento_Tax::sales_tax_rates was processed [] []
+[2023-04-18T12:59:37.624655+00:00] main.INFO: Add of item with id Magento_TaxImportExport::system_convert_tax was processed [] []
+[2023-04-18T12:59:37.625333+00:00] main.INFO: Add of item with id Magento_AsynchronousOperations::system_magento_logging was processed [] []
+[2023-04-18T12:59:37.626637+00:00] main.INFO: Add of item with id Magento_AsynchronousOperations::system_magento_logging_bulk_operations was processed [] []
+[2023-04-18T12:59:37.628705+00:00] main.INFO: Add of item with id Magento_CurrencySymbol::system_currency was processed [] []
+[2023-04-18T12:59:37.630452+00:00] main.INFO: Add of item with id Magento_CurrencySymbol::system_currency_rates was processed [] []
+[2023-04-18T12:59:37.632115+00:00] main.INFO: Add of item with id Magento_CurrencySymbol::system_currency_symbols was processed [] []
+[2023-04-18T12:59:37.632856+00:00] main.INFO: Add of item with id PayPal_Braintree::settlement_report was processed [] []
+[2023-04-18T12:59:37.633500+00:00] main.INFO: Add of item with id PayPal_Braintree::virtual_terminal was processed [] []
+[2023-04-18T12:59:39.291793+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header.inner.right' and 'header' respectively. [] []
+[2023-04-18T13:23:26.532512+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\HelloWorld\Controller\Index\Index\Interceptor, Perspective\HelloWorld\Controller\Index\Index::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/HelloWorld/Controller/Index/Index/Interceptor.php on line 14 [] []
+[2023-04-18T13:23:26.533646+00:00] main.ERROR: Type Error occurred when creating object: Perspective\HelloWorld\Controller\Index\Index\Interceptor, Perspective\HelloWorld\Controller\Index\Index::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/HelloWorld/Controller/Index/Index/Interceptor.php on line 14 [] []
+[2023-04-18T13:29:04.460006+00:00] main.ERROR: The XML in file "/home/troia/ApacheSites/magento246.loc/content/app/code/Perspective/Hello/etc/frontend/routes.xml" is invalid:
+Failed to parse QName 'xsi:'
+Line: 2
+
+Specification mandates value for attribute xsi:
+Line: 3
+
+attributes construct error
+Line: 3
+
+Couldn't find end of Start Tag config line 2
+Line: 3
+
+Extra content at the end of the document
+Line: 3
+
+Verify the XML and try again. [] []
+[2023-04-19T10:36:01.888470+00:00] main.INFO: Broken reference: the 'tracking' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.890495+00:00] main.INFO: Broken reference: the 'notification_area' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.891169+00:00] main.INFO: Broken reference: the 'unread_system_messages' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.891833+00:00] main.INFO: Broken reference: the 'notification_window' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.892489+00:00] main.INFO: Broken reference: the 'notification.messages' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.893209+00:00] main.INFO: Broken reference: the 'global_notices' element cannot be added as child to 'global.notices', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.893865+00:00] main.INFO: Broken reference: the 'logo' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.894516+00:00] main.INFO: Broken reference: the 'global.search' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.895163+00:00] main.INFO: Broken reference: the 'user' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.895820+00:00] main.INFO: Broken reference: the 'menu' element cannot be added as child to 'page.menu', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.896459+00:00] main.INFO: Broken reference: the 'breadcrumbs' element cannot be added as child to 'page.breadcrumbs', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.897127+00:00] main.INFO: Broken reference: the 'formkey' element cannot be added as child to 'page.formkey', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.897774+00:00] main.INFO: Broken reference: the 'page.title' element cannot be added as child to 'main.top', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.898438+00:00] main.INFO: Broken reference: the 'messages' element cannot be added as child to 'page.messages', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.899095+00:00] main.INFO: Broken reference: the 'page.actions.toolbar' element cannot be added as child to 'page.main.actions', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.899737+00:00] main.INFO: Broken reference: the 'legal' element cannot be added as child to 'footer', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.900528+00:00] main.INFO: Broken reference: the 'header.inner.left' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.901252+00:00] main.INFO: Broken reference: the 'header.inner.right' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2023-04-19T10:36:01.902007+00:00] main.INFO: Broken reference: the 'user' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-19T10:36:01.902637+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-19T10:36:01.903285+00:00] main.INFO: Broken reference: the 'logo' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-19T10:36:01.903936+00:00] main.INFO: Broken reference: the 'global.search' tries to reorder itself towards 'logo', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-19T10:36:01.904626+00:00] main.INFO: Broken reference: the 'page.actions.toolbar' tries to reorder itself towards '', but their parents are different: 'page.main.actions' and '' respectively. [] []
+[2023-04-19T10:36:01.905336+00:00] main.INFO: Broken reference: the 'header.inner.left' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-19T10:36:01.906027+00:00] main.INFO: Broken reference: the 'header.inner.right' tries to reorder itself towards 'header.inner.left', but their parents are different: 'header' and '' respectively. [] []
+[2023-04-19T10:36:01.906705+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header.inner.right' and '' respectively. [] []
+[2023-04-19T10:53:46.635281+00:00] main.ERROR: Warning: Undefined array key "" in /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Module/ModuleList/Loader.php on line 99 [] []
+[2023-04-19T10:53:47.410544+00:00] main.ERROR: Warning: Undefined array key "" in /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Module/ModuleList/Loader.php on line 99 [] []
+[2023-04-19T10:54:56.845131+00:00] main.ERROR: Warning: Undefined array key "" in /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Module/ModuleList/Loader.php on line 99 [] []
+[2023-04-19T10:54:57.571682+00:00] main.ERROR: Warning: Undefined array key "" in /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Module/ModuleList/Loader.php on line 99 [] []
+[2023-04-19T11:09:13.450961+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Index\Interceptor, Perspective\Hello\Controller\Index\Index::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\View\Result\PageFactory, Magento\Framework\App\Action\Context given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Index/Interceptor.php on line 14 [] []
+[2023-04-19T11:09:13.455713+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Index\Interceptor, Perspective\Hello\Controller\Index\Index::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\View\Result\PageFactory, Magento\Framework\App\Action\Context given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Index/Interceptor.php on line 14 [] []
+[2023-04-19T11:09:14.755022+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Index\Interceptor, Perspective\Hello\Controller\Index\Index::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\View\Result\PageFactory, Magento\Framework\App\Action\Context given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Index/Interceptor.php on line 14 [] []
+[2023-04-19T11:09:14.757288+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Index\Interceptor, Perspective\Hello\Controller\Index\Index::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\View\Result\PageFactory, Magento\Framework\App\Action\Context given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Index/Interceptor.php on line 14 [] []
+[2023-04-19T11:15:15.667015+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\Result\JsonFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:15:15.667937+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\Result\JsonFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:19:09.218590+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\ResultFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:19:09.219551+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\ResultFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:21:37.204055+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\Result\JsonFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:21:37.205027+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\Result\JsonFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:21:49.830039+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\Result\JsonFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:21:49.831016+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($pageFactory) must be of type Magento\Framework\Controller\Result\JsonFactory, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:22:12.135940+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:22:12.137154+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:22:45.777087+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:22:45.778185+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:23:03.023176+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:23:03.025497+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:23:25.644098+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:23:25.645445+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:24:00.508471+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:24:00.510376+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:24:25.938432+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:24:25.939374+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:24:49.060684+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:24:49.061666+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:25:13.890868+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:25:13.891950+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:25:54.092847+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:25:54.094793+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
+[2023-04-19T11:32:48.299914+00:00] main.ERROR: Invalid return type [] []

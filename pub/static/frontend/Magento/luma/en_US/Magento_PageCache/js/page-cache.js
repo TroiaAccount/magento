@@ -1,0 +1,1 @@
+/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-page-cache/view/frontend/web/js/page-cache.js

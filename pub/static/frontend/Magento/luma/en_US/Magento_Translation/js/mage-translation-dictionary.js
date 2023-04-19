@@ -1,0 +1,1 @@
+/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-translation/view/base/web/js/mage-translation-dictionary.js
