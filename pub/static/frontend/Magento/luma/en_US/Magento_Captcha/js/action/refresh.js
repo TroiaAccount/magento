@@ -1,1 +1,0 @@
-/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-captcha/view/frontend/web/js/action/refresh.js

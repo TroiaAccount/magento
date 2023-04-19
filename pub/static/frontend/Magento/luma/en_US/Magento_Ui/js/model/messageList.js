@@ -1,1 +1,0 @@
-/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-ui/view/frontend/web/js/model/messageList.js

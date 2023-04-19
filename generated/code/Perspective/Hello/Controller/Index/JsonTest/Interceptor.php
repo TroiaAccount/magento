@@ -8,9 +8,10 @@ class Interceptor extends \Perspective\Hello\Controller\Index\JsonTest implement
 {
     use \Magento\Framework\Interception\Interceptor;
 
-    public function __construct()
+    public function __construct(\Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory)
     {
         $this->___init();
+        parent::__construct($resultJsonFactory);
     }
 
     /**

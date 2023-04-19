@@ -278,3 +278,59 @@ Verify the XML and try again. [] []
 [2023-04-19T11:25:54.092847+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
 [2023-04-19T11:25:54.094793+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\Json\Interceptor, Perspective\Hello\Controller\Index\Json::__construct(): Argument #1 ($context) must be of type Magento\Framework\App\Action\Context, Magento\Framework\View\Result\PageFactory given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/Json/Interceptor.php on line 14 [] []
 [2023-04-19T11:32:48.299914+00:00] main.ERROR: Invalid return type [] []
+[2023-04-19T11:56:41.668952+00:00] main.ERROR: Command "d:m:see" is not defined.
+
+Did you mean one of these?
+    admin:adobe-ims:disable
+    admin:adobe-ims:enable
+    admin:adobe-ims:info
+    admin:adobe-ims:status
+    braintree:migrate
+    catalog:images:resize
+    config:sensitive:set
+    cron:remove
+    deploy:mode:set
+    deploy:mode:show
+    dev:email:newsletter-compatibility-check
+    dev:email:override-compatibility-check
+    dev:source-theme:deploy
+    dev:template-hints:disable
+    dev:template-hints:enable
+    dev:template-hints:status
+    dev:xml:convert
+    downloadable:domains:add
+    downloadable:domains:remove
+    downloadable:domains:show
+    encryption:payment-data:update
+    indexer:set-dimensions-mode
+    indexer:set-mode
+    indexer:show-dimensions-mode
+    indexer:show-mode
+    info:adminuri
+    info:timezone:list
+    inventory-geonames:import
+    queue:consumers:list
+    queue:consumers:restart
+    queue:consumers:start
+    sampledata:remove
+    setup:config:set
+    setup:db-schema:upgrade
+    setup:performance:generate-fixtures
+    setup:store-config:set
+#0 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(259): Symfony\Component\Console\Application->find()
+#1 /home/troia/ApacheSites/magento246.loc/content/vendor/magento/framework/Console/Cli.php(116): Symfony\Component\Console\Application->doRun()
+#2 /home/troia/ApacheSites/magento246.loc/content/vendor/symfony/console/Application.php(171): Magento\Framework\Console\Cli->doRun()
+#3 /home/troia/ApacheSites/magento246.loc/content/bin/magento(23): Symfony\Component\Console\Application->run()
+#4 {main} [] []
+[2023-04-19T12:05:26.905241+00:00] main.ERROR: Invalid return type [] []
+[2023-04-19T12:07:22.022030+00:00] main.ERROR: Invalid return type [] []
+[2023-04-19T12:07:26.731024+00:00] main.ERROR: Invalid return type [] []
+[2023-04-19T12:07:56.009125+00:00] main.ERROR: Invalid return type [] []
+[2023-04-19T12:11:07.987605+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:11:07.988734+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:11:17.559893+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:11:17.561259+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:11:19.156109+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:11:19.157245+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:13:57.252358+00:00] main.CRITICAL: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
+[2023-04-19T12:13:57.253391+00:00] main.ERROR: Type Error occurred when creating object: Perspective\Hello\Controller\Index\RawTest\Interceptor, Perspective\Hello\Controller\Index\RawTest::__construct(): Argument #1 ($raw) must be of type Magento\Framework\Controller\Result\Raw, Magento\Framework\App\Response\Http\Interceptor given, called in /home/troia/ApacheSites/magento246.loc/content/generated/code/Perspective/Hello/Controller/Index/RawTest/Interceptor.php on line 14 [] []
