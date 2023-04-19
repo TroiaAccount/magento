@@ -11,17 +11,13 @@ use Magento\Framework\Exception\NotFoundException;
 
 class JsonTest implements HttpGetActionInterface
 {
-    protected $JsonFactory;
-    public function __construct(
-        \Magento\Framework\App\Action\Context $context,
-        JsonFactory $JsonFactory
-    )
+    protected $resultJsonFactory;
+    public function __construct(\Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory)
     {
-        $this->JsonFactory = $JsonFactory;
+        $this->resultJsonFactory = $resultJsonFactory;
     }
     public function execute()
     {
-
-        return $this->JsonFactory->create(['fdasdf' => 'adfasdf']);
+        return $this->resultJsonFactory->create()->setData(['Test' => 'test']);
     }
 }
