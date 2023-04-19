@@ -1,0 +1,1 @@
+/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-page-builder/view/base/web/js/widget-initializer.js

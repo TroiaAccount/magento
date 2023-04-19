@@ -1,0 +1,1 @@
+/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-cookie/view/frontend/web/js/require-cookie.js

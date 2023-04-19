@@ -1,0 +1,1 @@
+/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-re-captcha-webapi-ui/view/frontend/web/js/jquery-mixin.js
