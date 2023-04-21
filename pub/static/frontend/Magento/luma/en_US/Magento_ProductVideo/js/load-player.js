@@ -1,1 +1,0 @@
-/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-product-video/view/frontend/web/js/load-player.js

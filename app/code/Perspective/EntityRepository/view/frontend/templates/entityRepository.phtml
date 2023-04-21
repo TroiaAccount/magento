@@ -1,0 +1,10 @@
+<?php $pageSize = 15 ?>
+
+<h1 class="page-title">
+        <span class="base" data-ui-id="page-title-wrapper"><?= $pageSize ?> products</span>
+</h1>
+
+<?php foreach ($block->getProductsByCategoryAndKeyword(6, 'Watch', '2023-04-19 00:00:00', $pageSize) as $filterProduct): ?>
+    <h2> <?= $filterProduct->getName(); ?> </h2>
+    <h3> <?= $filterProduct->getPrice(); ?> </h3>
+<?php endforeach; ?>

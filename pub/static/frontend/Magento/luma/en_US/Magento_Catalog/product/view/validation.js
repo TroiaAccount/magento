@@ -1,1 +1,0 @@
-/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-catalog/view/frontend/web/product/view/validation.js

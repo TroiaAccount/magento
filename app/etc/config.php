@@ -348,7 +348,9 @@ return [
         'Magento_WishlistSampleData' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
+        'Perspective_EntityRepository' => 1,
         'Perspective_Hello' => 1,
+        'Perspective_Model' => 1,
         'Perspective_TutorialEntity' => 1,
         'Temando_ShippingRemover' => 1
     ]

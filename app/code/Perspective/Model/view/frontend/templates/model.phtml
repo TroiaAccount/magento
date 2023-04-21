@@ -1,0 +1,27 @@
+<?php $product = $block->getProductById('1'); ?>
+<?php if (!is_null($product)) : ?>
+    <h2><?= $product->getName(); ?></h2>
+    <p><?= $product->getDescription() ?></p>
+<?php endif; ?>
+    <hr>
+<?php foreach ($block->getCheapProducts(15) as $cheapProduct): ?>
+    <h2> <?= $cheapProduct->getName(); ?> </h2>
+    <h3> <?= $cheapProduct->getPrice(); ?> </h3>
+<?php endforeach; ?>
+    <hr>
+<?php $products = $block->getfiletrProducts(); ?>
+<?php if (!is_null($products)) : ?>
+    <?php foreach ($products as $filterProduct): ?>
+        <h2> <?= $filterProduct->getName(); ?> </h2>
+        <h3> <?= $filterProduct->getPrice(); ?> </h3>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+<hr>
+<?php
+$productCollection = $block->getProductCollection();
+foreach ($productCollection as $product) {
+    print_r($product->getData()['name']);
+    echo "<br>";
+}
+?>

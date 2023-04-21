@@ -1,1 +1,0 @@
-/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-theme/view/frontend/web/js/view/breadcrumbs.js

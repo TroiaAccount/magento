@@ -1,1 +1,0 @@
-/home/troia/ApacheSites/magento246.loc/content/vendor/magento/module-configurable-product/view/frontend/web/js/catalog-add-to-cart-mixin.js
