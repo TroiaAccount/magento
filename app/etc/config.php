@@ -351,7 +351,9 @@ return [
         'Perspective_EntityRepository' => 1,
         'Perspective_Hello' => 1,
         'Perspective_Model' => 1,
+        'Perspective_Product' => 1,
         'Perspective_TutorialEntity' => 1,
+        'Perspective_ViewModel' => 1,
         'Temando_ShippingRemover' => 1
     ]
 ];

@@ -1,0 +1,9 @@
+<h1 class="page-title">
+    <span class="base" data-ui-id="page-title-wrapper">Products by price 50-60 in category  Women - Tops - Jackets</span>
+</h1>
+<?php foreach ($block->getProductsByPrices(50, 60) as $product){?>
+    <h2><?= $product->getName() ?></h2>
+    <h3><?= $product->getSku() ?></h3>
+    <h3><?= $product->getPrice() ?></h3>
+    <hr>
+<?php }?>

@@ -1,0 +1,22 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\ViewModel\ViewModel\Collection $viewModel*/
+$viewModel = $block->getData('view_model');
+?>
+<?php foreach ($viewModel->getCollection() ?? [] as $product): ?>
+    <div>
+    <p>
+        <b><?php echo __('Name: ') . '</b>' . $product->getName() ?>
+    </p>
+    <p>
+        <b><?php echo __('Visibility: ') . '</b>' . $viewModel->getVisibilityLabel($product->getVisibility()); ?>
+    </p>
+    <?php
+        $iterator = 0;
+        foreach ($viewModel->getCategoriesByIds($product->getCategoryIds()) as $category):
+            ?>
+<?php echo ($iterator++ > 0 ? ', ' : '<b>Categories:</b> ') . $category->getName()?>
+<?php endforeach; ?>
+    </div>
+    <hr>
+<?php endforeach; ?>
