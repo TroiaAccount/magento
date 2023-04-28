@@ -1,0 +1,13 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\ImageInfo\ViewModel\GetImage $viewModel*/
+$viewModel = $block->getData('view_model');
+$product_id = 50;
+
+$getProduct = $viewModel->getProduct($product_id);
+?>
+<h1>Product name: <?= $getProduct->product->getName() ?></h1>
+<h2>Product sku: <?= $getProduct->product->getSku() ?></h2>
+<h3>Img url: <?= $getProduct->getImage()->getUrl(); ?></h3>
+<h3>Img width: <?= $getProduct->getImage()->getWidth(); ?></h3>
+<h3>Img height: <?= $getProduct->getImage()->getHeight(); ?></h3>

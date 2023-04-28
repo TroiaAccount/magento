@@ -1,0 +1,13 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\ProductQty\ViewModel\ProductInfo $viewModel*/
+$viewModel = $block->getData('view_model');
+$currentProduct = $viewModel->getCurrentProduct();
+$stockItem = $currentProduct->getExtensionAttributes()->getStockItem();
+?>
+
+<h3><b>Qty:</b> <?=  $stockItem->getQty(); ?></h3>
+<h3><b>MinQty:</b> <?= $stockItem->getMinQty(); ?></h3>
+<h3><b>MinSaleQty:</b> <?= $stockItem->getMinSaleQty(); ?></h3>
+<h3><b>MaxSaleQty:</b> <?= $stockItem->getMaxSaleQty(); ?></h3>
+<h3><b>is in stock:</b> <?= $stockItem->getIsInStock(); ?></h3>

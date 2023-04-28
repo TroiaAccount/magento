@@ -1,0 +1,13 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\Orders\ViewModel\Order $viewModel*/
+
+$viewModel = $block->getData('order_view_model');
+
+$getOrders = $viewModel->getOrders();
+foreach ($getOrders as $order){
+?>
+    <h2><?= $order->getId() ?></h2>
+<?php
+}
+?>

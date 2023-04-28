@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1681912027;s:6:"expire";i:1713448027;s:4:"tags";s:37:"013_LAYOUT_GENERAL_CACHE_TAG,013_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1682675744;s:6:"expire";i:1714211744;s:4:"tags";s:37:"013_LAYOUT_GENERAL_CACHE_TAG,013_MAGE";}
 <?xml version="1.0"?>
 <layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><handle id="catalog_category_view"><body/>
 </handle><handle id="catalogsearch_advanced_index"><body/>
@@ -7106,14 +7106,107 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1681912027;s:6:"expire";i:1713448027;s:4:"t
       </referenceBlock>
    </referenceContainer>
 </body>
+</handle><handle id="customers_index_index"><referenceContainer name="content">
+   <block name="customers" template="Perspective_Customers::customers.phtml">
+      <arguments>
+         <argument name="view_model" xsi:type="object">
+                    Perspective\Customers\ViewModel\Customers
+                </argument>
+      </arguments>
+   </block>
+</referenceContainer>
+</handle><handle id="entityrepository_index_index" layout="1column"><head>
+   <title> Tutorial Entity by Repository</title>
+</head>
+<body>
+   <referenceContainer name="content">
+      <block class="Perspective\EntityRepository\Block\EntityRepository" name="perspective.entityRepository" template="Perspective_EntityRepository::entityRepository.phtml"/>
+   </referenceContainer>
+</body>
 </handle><handle id="hello_index_index"><body>
    <referenceContainer name="content">
       <block class="Perspective\Hello\Block\Hello" name="perspective.hello" template="Perspective_Hello::hello.phtml"/>
    </referenceContainer>
 </body>
+</handle><handle id="imageinfo_index_index"><referenceContainer name="content">
+   <block name="perspective.imageinfo" template="Perspective_ImageInfo::customPage.phtml">
+      <arguments>
+         <argument name="view_model" xsi:type="object">Perspective\ImageInfo\ViewModel\GetImage</argument>
+      </arguments>
+   </block>
+</referenceContainer>
+</handle><handle id="model_index_getproduct" layout="1column"><head>
+   <title> Tutorial Entity by Resource</title>
+</head>
+<body>
+   <referenceContainer name="content">
+      <block class="Perspective\Model\Block\Model" name="Perspective.Model" template="Perspective_Model::getproduct.phtml"/>
+   </referenceContainer>
+</body>
+</handle><handle id="model_index_index" layout="1column"><head>
+   <title> Tutorial Entity by Resource</title>
+</head>
+<body>
+   <referenceContainer name="content">
+      <block class="Perspective\Model\Block\Model" name="Perspective.Model" template="Perspective_Model::model.phtml"/>
+   </referenceContainer>
+</body>
+</handle><handle id="model_index_specific" layout="1column"><head>
+   <title> Tutorial Entity by Resource</title>
+</head>
+<body>
+   <referenceContainer name="content">
+      <block class="Perspective\Model\Block\Model" name="Perspective.Model" template="Perspective_Model::specific.phtml"/>
+   </referenceContainer>
+</body>
+</handle><handle id="orders_index_index"><referenceContainer name="content">
+   <block name="orders" template="Perspective_Orders::orders.phtml">
+      <arguments>
+         <argument name="order_view_model" xsi:type="object">Perspective\Orders\ViewModel\Order</argument>
+      </arguments>
+   </block>
+</referenceContainer>
+</handle><handle id="product_index_index"><body>
+   <referenceContainer name="content">
+      <block class="Perspective\Product\Block\Product" name="perspective.product" template="Perspective_Product::product.phtml">
+
+            </block>
+   </referenceContainer>
+</body>
+</handle><handle id="catalog_product_view" layout="1column"><body>
+   <referenceContainer name="product.info.main">
+      <block name="product.info.main.perspective_custom_product_info" template="Perspective_ProductQty::productTemplates.phtml" after="product.info.price">
+         <arguments>
+            <argument name="view_model" xsi:type="object">
+                    Perspective\ProductQty\ViewModel\ProductInfo
+                </argument>
+         </arguments>
+      </block>
+   </referenceContainer>
+</body>
 </handle><handle id="catalog_product_view"><body>
    <referenceContainer name="product.info.main">
       <block name="product.info.main.perspective_custom_product_block" class="Perspective\TutorialEntity\Block\Custom" template="Perspective_TutorialEntity::customTemplate.phtml" after="product.info.price" before="product.price.tier"/>
+   </referenceContainer>
+</body>
+</handle><handle id="viewmodel_index_collection"><body>
+   <referenceContainer name="content">
+      <block name="Collection" template="Perspective_ViewModel::collection_view_model.phtml">
+         <arguments>
+            <argument name="view_model" xsi:type="object">
+                        Perspective\ViewModel\ViewModel\Collection
+                    </argument>
+         </arguments>
+      </block>
+   </referenceContainer>
+</body>
+</handle><handle id="viewmodel_index_index"><body>
+   <referenceContainer name="content">
+      <block class="Perspective\ViewModel\Block\ViewModelBlock" name="perspective.viewmodel" template="Perspective_ViewModel::view_model_template.phtml">
+         <arguments>
+            <argument name="view_model" xsi:type="object">Perspective\ViewModel\ViewModel\MyNewViewModel</argument>
+         </arguments>
+      </block>
    </referenceContainer>
 </body>
 </handle><handle id="default"><body>

@@ -1,0 +1,10 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\Customers\ViewModel\Customers $viewModel*/
+    $viewModel = $block->getData('view_model');
+    foreach ($viewModel->getAllCustomers() as $customer){
+        ?>
+        <h2><b><?= $customer->getId(); ?>. </b> <?= $customer->getName(); ?> - <?= $customer->getEmail(); ?></h2>
+        <?php
+    }
+?>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="product.info.main">
+        <block
+            name="product.info.main.perspective_custom_product_info"
+            template="Perspective_ProductQty::productTemplates.phtml"
+            after="product.info.price">
+            <arguments>
+                <argument name="view_model" xsi:type="object">
+                    Perspective\ProductQty\ViewModel\ProductInfo
+                </argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</body>
+</page>
+
