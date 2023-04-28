@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ * @var \Perspective\Delivery\ViewModel\Shiping $viewModel
+ */
+$viewModel = $block->getData('shipping_model_view');
+$alllShipping = $viewModel->getAllShippigMethods();
+foreach($alllShipping as $code => $shipping) {
+    echo $code;echo "<br>";
+    //var_dump($shipping);
+}
+?>
+<h1>
+    Active shipping methods
+</h1>
+<?php
+$activeShipping = $viewModel->getActiveShippingMethods();
+foreach($activeShipping as $code => $active) {
+    echo $code;echo "<br>";
+    //var_dump($shipping);
+}
+?>

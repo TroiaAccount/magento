@@ -1,0 +1,11 @@
+<?php
+
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\PaymentMethods\ViewModel\Payment $viewModel */
+/** @var \Magento\Payment\Helper\Data $methods */
+$viewModel = $block->getData('payment');
+$methods = $viewModel->getPaymentMethodList();
+foreach ($methods as $method) {
+    echo($method . "<br>");
+}
+?>

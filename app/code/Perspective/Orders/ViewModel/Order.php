@@ -3,17 +3,30 @@
 namespace Perspective\Orders\ViewModel;
 
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use Magento\Sales\Model\OrderFactory;
-
 class Order implements ArgumentInterface
 {
     protected $orderFactory;
 
-    public function __construct(OrderFactory $orderFactory){
+    public function __construct(\Magento\Sales\Model\ResourceModel\Order\CollectionFactory $orderFactory){
         $this->orderFactory = $orderFactory;
     }
 
     public function getOrders(){
-        return $this->orderFactory->create()->getCollection();
+        $orders = $this->orderFactory->create()->addAttributeToSelect('*');
+        return $orders;
+    }
+
+    public function getOrderCollectionByCustomerId($customerId)
+    {
+        $collection = $this->orderFactory->create($customerId)
+            ->addFieldToSelect('*')
+
+            ->setOrder(
+                'created_at',
+                'desc'
+            );
+
+        return $collection;
+
     }
 }

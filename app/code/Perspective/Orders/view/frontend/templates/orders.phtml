@@ -5,9 +5,18 @@
 $viewModel = $block->getData('order_view_model');
 
 $getOrders = $viewModel->getOrders();
-foreach ($getOrders as $order){
+foreach ($getOrders as $order) {
 ?>
-    <h2><?= $order->getId() ?></h2>
+    <h1><b><?= $order->getId() ?></b>. <?= $order->getCustomerName() ?></h1>
+    <?php
+        foreach($order->getItems() as $item){
+            ?>
+            <h3><?= $item->getId() ?>. <?= $item->getName() ?></h3>
+            <?php
+        }
+    ?>
+
+    <hr>
 <?php
 }
 ?>

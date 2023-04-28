@@ -1,0 +1,11 @@
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/**@var \Perspective\Customers\ViewModel\Customers $viewModel*/
+$viewModel = $block->getData('view_model');
+
+foreach ($viewModel->getCustomerGroups() as $group){
+?>
+    <h2><?= $group->getId() ?>. <?= $group->getCustomerGroupCode() ?></h2>
+<?php
+}
+?>
