@@ -348,7 +348,10 @@ return [
         'Magento_WishlistSampleData' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
+        'Perspective_ColorAttribute' => 1,
         'Perspective_Customers' => 1,
+        'Perspective_DbSchemaPatch' => 1,
+        'Perspective_DeclarativeSchema' => 1,
         'Perspective_Delivery' => 1,
         'Perspective_EntityRepository' => 1,
         'Perspective_Hello' => 1,
@@ -358,6 +361,7 @@ return [
         'Perspective_PaymentMethods' => 1,
         'Perspective_Product' => 1,
         'Perspective_ProductQty' => 1,
+        'Perspective_Sales' => 1,
         'Perspective_TutorialEntity' => 1,
         'Perspective_ViewModel' => 1,
         'Temando_ShippingRemover' => 1

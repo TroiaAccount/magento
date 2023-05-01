@@ -1,0 +1,17 @@
+<?php
+    /** @var Perspective\Sales\ViewModel\Sales $model
+     * @var Magento\Framework\View\Element\Template $block
+     */
+
+    $model = $block->getData('sales_model');
+    foreach ($model->getSalesByFilter('Product 1', '2022-04-03') as $key => $product){
+        ?>
+        <h2><?= $product['name'] ?></h2>
+        <h3><b>Price:</b> <?= $product['price'] ?></h3>
+        <h3><b>Total price:</b> <?= $product['total_price'] ?></h3>
+        <h3><b>Discount:</b> <?= $product['discount'] ?></h3>
+        <h3><b>Date:</b> <?= $product['date'] ?></h3>
+        <hr>
+<?php
+    }
+?>
