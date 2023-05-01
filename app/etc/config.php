@@ -351,6 +351,7 @@ return [
         'Perspective_ColorAttribute' => 1,
         'Perspective_Customers' => 1,
         'Perspective_DbSchemaPatch' => 1,
+        'Perspective_DbScripts' => 1,
         'Perspective_DeclarativeSchema' => 1,
         'Perspective_Delivery' => 1,
         'Perspective_EntityRepository' => 1,
