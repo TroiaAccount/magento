@@ -1,0 +1,10 @@
+<?php
+/** @var \Inviqa\SystemConfigExample\Block\Template $block */
+?>
+<div class="template">
+    <?php if ($block->isEnabled()): ?>
+        <?= $block->getTitle(); ?>
+        <?= $block->getSecret(); ?>
+        <?= $block->getOption(); ?>
+    <?php endif; ?>
+</div>

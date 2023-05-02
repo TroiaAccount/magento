@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Adminka::inviqa" title="Inviqa"
+             module="Perspective_Adminka" sortOrder="51" resource="Perspective_Adminka::inviqa"/>
+        <add id="Perspective_Adminka::inviqa_configuration"
+             title="Configuration" module="Perspective_Adminka" sortOrder="99" parent="Perspective_Adminka::inviqa" action="adminhtml/system_config/edit/section/inviqa" resource="Perspective_Adminka::inviqa"/>
+    </menu>
+</config>

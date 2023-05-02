@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="admin_hello_world" frontName="admin_hello_world">
+            <module name="Perspective_AdminHelloWorld"/>
+        </route>
+    </router>
+</config>

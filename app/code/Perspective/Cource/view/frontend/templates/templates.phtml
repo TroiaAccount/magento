@@ -1,0 +1,12 @@
+<?php
+    /**
+     * @var \Magento\Catalog\Block\Product\View $block
+     * @var \Perspective\Cource\ViewModel\Data $model
+     */
+    $model = $block->getData('view_model');
+    $product= $block->getProduct();
+    $getCurrencies = $model->setProduct($product)->getData();
+    foreach ($getCurrencies as $key => $currency){
+        echo "<h3>$key: $currency</h3>";
+    }
+?>
