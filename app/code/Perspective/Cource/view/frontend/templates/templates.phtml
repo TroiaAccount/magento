@@ -4,9 +4,23 @@
      * @var \Perspective\Cource\ViewModel\Data $model
      */
     $model = $block->getData('view_model');
+
     $product= $block->getProduct();
-    $getCurrencies = $model->setProduct($product)->getData();
+    $model->setProduct($product);
+    $getCurrenciesByMagento = $model->getCurrenciesByMagento();
+    $getCurrencies = $model->getData();
+    ?>
+<h2>Get currencies by custom settings</h2>
+<?php
     foreach ($getCurrencies as $key => $currency){
         echo "<h3>$key: $currency</h3>";
     }
+?>
+<hr>
+<h2>Get currencies by magento store settings</h2>
+<?php
+
+foreach ($getCurrenciesByMagento as $key => $currency){
+    echo "<h3>$key: $currency</h3>";
+}
 ?>

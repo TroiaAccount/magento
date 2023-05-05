@@ -1,0 +1,18 @@
+{
+  "rh_blog": {
+    "column": {
+      "id": true,
+      "name": true,
+      "title": true,
+      "content": true,
+      "status": true,
+      "created_at": true
+    },
+    "index": {
+      "RH_BLOG_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}
