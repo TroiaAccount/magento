@@ -1,16 +1,16 @@
 <?php
 
-namespace Perspective\ColorAttribute\Setup\Patch\Data;
+namespace Perspective\Social\Setup\Patch\Data;
 
+use Magento\Catalog\Model\Product;
+use Magento\Eav\Setup\EavSetup;
+use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Magento\Eav\Setup\EavSetup;
 
-/**
- * Patch is mechanism, that allows to do atomic upgrade data changes.
- */
-class AddEnablColorAttributePatch implements DataPatchInterface
+class AddSocialProductAttribute implements DataPatchInterface
 {
+
     /**
      * @var ModuleDataSetupInterface
      */
@@ -19,33 +19,36 @@ class AddEnablColorAttributePatch implements DataPatchInterface
     /**
      * @var EavSetup
      */
-    protected $eavSetup;
+    private EavSetup $eavSetup;
 
     /**
      * @param ModuleDataSetupInterface $moduleDataSetup
+     * @param EavSetup $eavSetupFactory
      */
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
-        EavSetup $eavSetup
+        EavSetup          $eavSetup
     )
     {
-        $this->eavSetup = $eavSetup;
         $this->moduleDataSetup = $moduleDataSetup;
+        $this->eavSetup = $eavSetup;
     }
 
     /**
-     * Do Upgrade.
+     * Run code inside patch
+     * If code fails, patch must be reverted, in case when we are speaking about schema - then under revert
+     * means run PatchInterface::revert()
      *
-     * @return void
+     * If we speak about data, under revert means: $transaction->rollback()
      */
     public function apply()
     {
         $this->moduleDataSetup->getConnection()->startSetup();
-        $this->eavSetup->addAttribute(\Magento\Catalog\Model\Product::ENTITY, 'enable_color', [
+        $this->eavSetup->addAttribute(\Magento\Catalog\Model\Product::ENTITY, 'socail_enabled', [
             'type' => 'int',
             'backend' => '',
             'frontend' => '',
-            'label' => 'Enable color',
+            'label' => 'Enable social',
             'input' => 'select',
             'class' => '',
             'source' => \Magento\Catalog\Model\Product\Attribute\Source\Boolean::class,
@@ -67,16 +70,6 @@ class AddEnablColorAttributePatch implements DataPatchInterface
     }
 
     /**
-     * Get aliases (previous names) for the patch.
-     *
-     * @return string[]
-     */
-    public function getAliases()
-    {
-        return [];
-    }
-
-    /**
      * Get array of patches that have to be executed prior to this.
      *
      * Example of implementation:
@@ -94,10 +87,12 @@ class AddEnablColorAttributePatch implements DataPatchInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Get aliases (previous names) for the patch.
+     *
+     * @return string[]
      */
-    public static function getVersion()
+    public function getAliases()
     {
-        return '2.0.0';
+        return [];
     }
 }

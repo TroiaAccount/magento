@@ -1,0 +1,21 @@
+<hr>
+<?php
+/**
+ * @var Magento\Catalog\Block\Product\View $block
+ * @var Perspective\Social\ViewModel\Social $social
+ */
+$social = $block->getData('social');
+$product = $block->getProduct();
+$social = $social->setProduct($product);
+
+$result = $social->getNewPrice();
+if($result['enable'] && $result['enable_product']){
+    ?>
+    <script>
+        const element = document.querySelector('[data-ui-id="page-title-wrapper"]');
+        element.innerHTML = "SOCIAL! " + element.innerHTML;
+    </script>
+<?php
+    echo 'Скидка на социальный продукт ' . $result['discount'] . '%. Стоимость с учетом скидки: ' . $result['new_price'];
+}
+?>

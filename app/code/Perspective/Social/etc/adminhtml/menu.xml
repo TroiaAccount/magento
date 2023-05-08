@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Social::view" title="Social" module="Perspective_Social" sortOrder="50" resource="Perspective_Social::view"/>
+        <add id="Perspective_Social::social_configuration"
+             title="Configuration" module="Perspective_Adminka" sortOrder="99" parent="Perspective_Social::view" action="adminhtml/system_config/edit/section/social" resource="Perspective_Social::view"/>
+    </menu>
+</config>
+

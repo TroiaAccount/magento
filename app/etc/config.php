@@ -350,6 +350,7 @@ return [
         'PayPal_BraintreeGraphQl' => 1,
         'Perspective_AdminHelloWorld' => 1,
         'Perspective_Adminka' => 1,
+        'Perspective_ClothingMaterial' => 1,
         'Perspective_ColorAttribute' => 1,
         'Perspective_Cource' => 1,
         'Perspective_Customers' => 1,
@@ -366,8 +367,11 @@ return [
         'Perspective_Product' => 1,
         'Perspective_ProductQty' => 1,
         'Perspective_Sales' => 1,
+        'Perspective_Social' => 1,
+        'Perspective_TestGridUi' => 1,
         'Perspective_TutorialEntity' => 1,
         'Perspective_ViewModel' => 1,
+        'RH_UiExample' => 1,
         'Temando_ShippingRemover' => 1
     ]
 ];
