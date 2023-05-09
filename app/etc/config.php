@@ -372,6 +372,9 @@ return [
         'Perspective_TutorialEntity' => 1,
         'Perspective_ViewModel' => 1,
         'RH_UiExample' => 1,
-        'Temando_ShippingRemover' => 1
+        'Temando_ShippingRemover' => 1,
+        'Troia_BeforePlugin' => 1,
+        'Troia_DemoPlugin' => 1,
+        'Troia_PricePlugin' => 1
     ]
 ];
