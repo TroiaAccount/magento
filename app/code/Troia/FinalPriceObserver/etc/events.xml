@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <event name="catalog_controller_product_view">
+        <observer name="troia_finalPriceObserver_change_price_product_view_observer"
+                  instance="Troia\FinalPriceObserver\Observer\ChangePriceProductViewObserver"/>
+    </event>
+    <event name="checkout_cart_product_add_before">
+        <observer name="troia_finalPriceObserver_change_final_price_product_view_observer" instance="Troia\FinalPriceObserver\Observer\ChangePriceProductViewObserver"/>
+    </event>
+</config>
