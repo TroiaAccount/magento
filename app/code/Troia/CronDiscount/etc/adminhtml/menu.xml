@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Troia_CronDiscount::view" title="Cron discount" module="Troia_CronDiscount" sortOrder="50" resource="Troia_CronDiscount::view"/>
+        <add id="Troia_CronDiscount::discount_configuration"
+             title="Configuration" module="Troia_CronDiscount" sortOrder="99" parent="Troia_CronDiscount::view" action="adminhtml/system_config/edit/section/discount" resource="Troia_CronDiscount::view"/>
+    </menu>
+</config>

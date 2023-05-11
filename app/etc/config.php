@@ -374,14 +374,15 @@ return [
         'RH_UiExample' => 0,
         'Temando_ShippingRemover' => 1,
         'Troia_BeforePlugin' => 0,
-        'Troia_CrontTest' => 1,
+        'Troia_CronDiscount' => 1,
+        'Troia_CrontTest' => 0,
         'Troia_DemoPlugin' => 0,
-        'Troia_FinalPriceObserver' => 1,
+        'Troia_FinalPriceObserver' => 0,
         'Troia_ModuleContact' => 0,
         'Troia_ObserverExample' => 0,
-        'Troia_PreferenceDbScripts' => 1,
+        'Troia_PreferenceDbScripts' => 0,
         'Troia_PreferenceExample' => 0,
         'Troia_PricePlugin' => 0,
-        'Troia_SampleEvent' => 1
+        'Troia_SampleEvent' => 0
     ]
 ];
