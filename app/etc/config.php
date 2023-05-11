@@ -383,6 +383,7 @@ return [
         'Troia_PreferenceDbScripts' => 0,
         'Troia_PreferenceExample' => 0,
         'Troia_PricePlugin' => 0,
-        'Troia_SampleEvent' => 0
+        'Troia_SampleEvent' => 0,
+        'Troia_ShippingMethodExample' => 1
     ]
 ];
