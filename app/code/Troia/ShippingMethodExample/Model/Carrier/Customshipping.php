@@ -14,6 +14,7 @@ use Magento\Shipping\Model\Carrier\CarrierInterface;
 use Magento\Shipping\Model\Rate\Result;
 use Magento\Shipping\Model\Rate\ResultFactory;
 use Psr\Log\LoggerInterface;
+use Magento\Customer\Model\Session;
 
 class Customshipping extends AbstractCarrier implements CarrierInterface
 {
@@ -23,6 +24,7 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
 
     private ResultFactory $rateResultFactory;
 
+    protected $customer;
     private MethodFactory $rateMethodFactory;
 
     public function __construct(
@@ -31,10 +33,11 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
         LoggerInterface $logger,
         ResultFactory $rateResultFactory,
         MethodFactory $rateMethodFactory,
+        Session $session,
         array $data = []
     ) {
         parent::__construct($scopeConfig, $rateErrorFactory, $logger, $data);
-
+        $this->customer = $session ?: \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Customer\Model\Session::class);
         $this->rateResultFactory = $rateResultFactory;
         $this->rateMethodFactory = $rateMethodFactory;
     }
@@ -50,7 +53,20 @@ class Customshipping extends AbstractCarrier implements CarrierInterface
         if (!$this->getConfigFlag('active')) {
             return false;
         }
-
+        $customerDob = $this->customer->getCustomer()->getDob();
+        $access = false;
+        if($customerDob != null){
+            $datetime = new \DateTime();
+            $birthDay = new \DateTime($customerDob);
+            $interval = $datetime->diff($birthDay);
+            $years = $interval->y;
+            if($years >= 60){
+                $access = true;
+            }
+        }
+        if(!$access){
+            return false;
+        }
         /** @var Method $method */
         $method = $this->rateMethodFactory->create();
         $method->setCarrier($this->_code);
