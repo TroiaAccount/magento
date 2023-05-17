@@ -16,9 +16,13 @@ class PaymentMethod extends \Magento\Payment\Model\Method\AbstractMethod {
 
     public function isAvailable(\Magento\Quote\Api\Data\CartInterface $quote = null)
     {
-        if ($quote && $quote->getShippingAddress()->getShippingMethod() === 'customshipping_customshipping') {
+        if(is_null($quote)){
             return true;
         }
+        if ($quote->getShippingAddress()->getShippingMethod() === 'customshipping_customshipping') {
+            return true;
+        }
+
         return false;
     }
 }
