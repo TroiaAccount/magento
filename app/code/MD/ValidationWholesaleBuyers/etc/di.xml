@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Shipping\Model\Rate\Result">
+        <plugin name="custom_module_shipping_method_list" type="MD\ValidationWholesaleBuyers\Plugin\ShippingMethodPlugin" sortOrder="1" disabled="false" />
+    </type>
     <type name="Magento\Payment\Model\MethodList">
-        <plugin name="custom_module_payment_method_list" type="MD\ValidationWholesaleBuyers\Plugin\PaymentMethodList" sortOrder="1" disabled="false" />
+        <plugin name="custom_module_payment_method_list" type="MD\ValidationWholesaleBuyers\Plugin\PaymentMethodList" sortOrder="2" disabled="false" />
     </type>
 </config>

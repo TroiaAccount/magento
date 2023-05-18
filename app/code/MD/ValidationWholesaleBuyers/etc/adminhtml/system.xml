@@ -28,11 +28,18 @@
                     <can_be_empty>1</can_be_empty>
                 </field>
 
+                <field id="avaliable_shipping_method" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Whosale shipping method</label>
+                    <source_model>MD\ValidationWholesaleBuyers\Model\ShippingMethods</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+
                 <field id="large_avaliable_payment_method" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Large whosale payment_method</label>
                     <source_model>MD\ValidationWholesaleBuyers\Model\PaymentMethods</source_model>
                     <can_be_empty>1</can_be_empty>
                 </field>
+
             </group>
         </section>
     </system>

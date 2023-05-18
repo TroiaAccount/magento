@@ -6,6 +6,7 @@ use Magento\Quote\Api\CartRepositoryInterface;
 use Magento\Payment\Model\MethodList;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Payment\Helper\Data;
+use Magento\Shipping\Model\Carrier;
 class PaymentMethodList
 {
     protected $cartRepository;
@@ -30,29 +31,29 @@ class PaymentMethodList
     public function afterGetAvailableMethods(MethodList $subject, $methods, CartInterface $quote = null)
     {
         if(!is_null($quote)) {
-            $customerGroupId = $quote->getCustomer()->getGroupId();
-            if ($customerGroupId == 5 || $customerGroupId == 6) {
-                switch ($customerGroupId) {
-                    case 5:
-                        $getScopeConfigProductCount = $this->scopeConfig->getValue('whosales_buyers/general/whosales') ?? 0;
-                        $itemsCount = $quote->getItemsCount();
-                        if($itemsCount > $getScopeConfigProductCount){
-                            $getScopeConfigPaymentMethod = $this->scopeConfig->getValue('whosales_buyers/general/avaliable_payment_method');
-                            $methods = [$this->paymentFactory->getMethodInstance($getScopeConfigPaymentMethod)];
-                        }
-                        break;
-                    case 6:
-                        $getScopeConfigProductCount = $this->scopeConfig->getValue('whosales_buyers/general/large_wholesale') ?? 0;
-                        $itemsCount = $quote->getItemsCount();
-                        if($itemsCount > $getScopeConfigProductCount){
-                            $getScopeConfigPaymentMethod = $this->scopeConfig->getValue('whosales_buyers/general/large_avaliable_payment_method');
-                            $methods = [$this->paymentFactory->getMethodInstance($getScopeConfigPaymentMethod)];
-                        }
-                        break;
-                }
-            }
-        }
 
+            $customerGroupId = $quote->getCustomer()->getGroupId();
+            switch ($customerGroupId) {
+                case 5:
+                    $getScopeConfigProductCount = $this->scopeConfig->getValue('whosales_buyers/general/whosales') ?? 0;
+                    $itemsCount = (int) $quote->getItemsCount();
+                    if($itemsCount > $getScopeConfigProductCount){
+                        $getScopeConfigPaymentMethod = $this->scopeConfig->getValue('whosales_buyers/general/avaliable_payment_method');
+                        $methods = [$this->paymentFactory->getMethodInstance($getScopeConfigPaymentMethod)];
+                    }
+                break;
+
+                case 6:
+                    $getScopeConfigProductCount = $this->scopeConfig->getValue('whosales_buyers/general/large_wholesale') ?? 0;
+                    $subtotal = (float) $quote->getSubtotal();
+                    if($subtotal > $getScopeConfigProductCount){
+                        $getScopeConfigPaymentMethod = $this->scopeConfig->getValue('whosales_buyers/general/large_avaliable_payment_method');
+                        $methods = [$this->paymentFactory->getMethodInstance($getScopeConfigPaymentMethod)];
+                    }
+                break;
+            }
+
+        }
         return $methods;
     }
 }
