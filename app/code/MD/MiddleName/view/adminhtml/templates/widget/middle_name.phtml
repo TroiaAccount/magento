@@ -1,0 +1,9 @@
+<?php
+/** @var \Magento\Customer\Block\Widget\Name $block */
+?>
+<div class="admin__field">
+    <label class="admin__field-label" for="order-create-middle-name"><?php /* @escapeNotVerified */ echo __('Middle Name/Initial') ?></label>
+    <div class="admin__field-control">
+        <input class="admin__control-text" type="text" id="order-create-middle-name" name="order[middle_name]" value="<?= $block->escapeHtmlAttr($block->getMiddleName()) ?>" data-validate="{required:true}" <?php if ($block->isRequired()) : ?>data-bind="attr: { 'aria-required': true }"<?php endif; ?>>
+    </div>
+</div>

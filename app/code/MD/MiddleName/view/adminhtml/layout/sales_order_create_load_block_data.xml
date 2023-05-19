@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <update handle="sales_order_create_load_block_data"/>
+    <referenceBlock name="order.create.billing.additional">
+        <action method="setChildBlockOrder">
+            <argument name="names" xsi:type="array">
+                <item name="middle_name" xsi:type="string">-1</item>
+            </argument>
+        </action>
+        <block class="Magento\Customer\Block\Widget\Name" name="middle_name" template="MD_MiddleName::widget/middle_name.phtml">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="types" xsi:type="array">
+                        <item name="free_shipping" xsi:type="string">required</item>
+                    </item>
+                </argument>
+            </arguments>
+        </block>
+    </referenceBlock>
+</layout>

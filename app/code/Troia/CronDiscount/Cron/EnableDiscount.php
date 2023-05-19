@@ -5,18 +5,16 @@ namespace Troia\CronDiscount\Cron;
 
 use Magento\Config\Model\ResourceModel\Config;
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\App\Cache\Type\Config as ConfigCache;
 
 class EnableDiscount
 {
 
     protected $config, $scopeConfig, $configCache;
 
-    public function __construct(Config $config, ScopeConfigInterface $scopeConfig, ConfigCache $configCache)
+    public function __construct(Config $config, ScopeConfigInterface $scopeConfig)
     {
         $this->scopeConfig = $scopeConfig;
         $this->config = $config;
-        $this->configCache = $configCache;
     }
 
     /**
@@ -26,7 +24,6 @@ class EnableDiscount
      */
     public function execute(): void
     {
-        $this->configCache->clean();
         $start = $this->scopeConfig->getValue('cron_discount/general/start');
         $end = $this->scopeConfig->getValue('cron_discount/general/end');
         $now = date('H', time());

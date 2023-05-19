@@ -1,0 +1,12 @@
+<?php if ($this->getSimilarProducts()->getSize()): ?>
+    <div class="widget-similar-products">
+        <h2><?php echo __('Близкие по цене'); ?></h2>
+        <ul class="product-items">
+            <?php foreach ($this->getSimilarProducts() as $_product): ?>
+                <li class="product-item">
+                    <a href="<?php echo $_product->getProductUrl(); ?>"><?php echo $_product->getName(); ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php endif; ?>

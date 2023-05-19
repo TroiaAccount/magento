@@ -5,6 +5,7 @@
  */
 namespace Magento\Framework\Code\Reader;
 
+use Laminas\ReCaptcha\Exception;
 use Magento\Framework\GetParameterClassTrait;
 use ReflectionClass;
 use ReflectionException;
@@ -94,7 +95,6 @@ class ClassReader implements ClassReaderInterface
         if (isset($this->parentsCache[$className])) {
             return $this->parentsCache[$className];
         }
-
         $parentClass = get_parent_class($className);
         if ($parentClass) {
             $result = [];

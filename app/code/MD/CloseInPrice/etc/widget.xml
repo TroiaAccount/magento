@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:widget:Magento_Widget:etc/widget.xsd">
+    <widget id="similar_products" class="MD\CloseInPrice\Block\Widget\SimilarProducts">
+        <label translate="true">Близкие по цене</label>
+        <description translate="true">Показывает продукты из категории текущего продукта, для которых стоимость находится в пределах "плюс/минус" N долларов.</description>
+        <parameters>
+            <parameter name="price_difference" xsi:type="text" required="true" visible="true">
+                <label translate="true">Разница в цене (доллары)</label>
+                <visible>true</visible>
+                <sort_order>10</sort_order>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
