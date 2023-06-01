@@ -1,10 +1,19 @@
+<?php
+$getSimilarProducts = $this->getSimilarProducts();
+?>
+
+<div style="display: flex; justify-content: space-between;">
     <div class="widget-similar-products">
         <h2><?php echo __('Проданы сегодня'); ?></h2>
         <ul class="product-items">
-            <?php foreach ($this->getSimilarProducts() as $product): ?>
+            <?php foreach ($getSimilarProducts['sales_today'] as $product): ?>
                 <li class="product-item">
                     <a href="<?php echo $product->getProductUrl(); ?>"><?php echo $product->getName(); ?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
     </div>
+    <div class="widget-similar-products">
+        <h2><?php echo __('В избранных:') . $getSimilarProducts['wishlist']; ?></h2>
+    </div>
+</div>

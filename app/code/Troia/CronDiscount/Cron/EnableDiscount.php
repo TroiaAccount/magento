@@ -22,7 +22,7 @@ class EnableDiscount
      *
      * @return void
      */
-    public function execute(): void
+    public function start(): void
     {
         $start = $this->scopeConfig->getValue('cron_discount/general/start');
         $end = $this->scopeConfig->getValue('cron_discount/general/end');

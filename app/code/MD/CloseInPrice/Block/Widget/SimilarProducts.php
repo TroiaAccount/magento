@@ -1,39 +1,36 @@
 <?php
 namespace MD\CloseInPrice\Block\Widget;
 
-use Magento\Catalog\Model\Product\Visibility;
-use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Framework\View\Element\Template;
 use Magento\Widget\Block\BlockInterface;
 use Magento\Catalog\Block\Product\View;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
+use Magento\Wishlist\Model\ResourceModel\Item\CollectionFactory as WishlistFactory;
 
 class SimilarProducts extends Template implements BlockInterface
 {
     protected $_template = 'widget/similar_products.phtml';
 
-    protected $collectionFactory;
-    protected $visibility;
+    protected $wishlistFactory;
     protected $product;
     protected $order;
     protected $searchCriteriaBuilder;
 
     public function __construct(
         Template\Context $context,
-        CollectionFactory $collectionFactory,
-        Visibility $visibility,
+
         View $product,
         OrderRepositoryInterface $order,
         SearchCriteriaBuilder $searchCriteriaBuilder,
+        WishlistFactory $wishlistFactory,
         array $data = []
     ) {
         parent::__construct($context, $data);
         $this->searchCriteriaBuilder = $searchCriteriaBuilder;
         $this->product = $product->getProduct();
-        $this->collectionFactory = $collectionFactory;
-        $this->visibility = $visibility;
         $this->order = $order;
+        $this->wishlistFactory = $wishlistFactory;
     }
 
     public function getPriceDifference()
@@ -72,7 +69,9 @@ class SimilarProducts extends Template implements BlockInterface
             }
         }
         
-
-        return $filteredOrderList;
+        $wishlistItems = $this->wishlistFactory->create();
+        $wishlistItems->addFieldToFilter('product_id', $this->product->getId());
+        $wishlistSize = $wishlistItems->getSize();
+        return ['sales_today' => $filteredOrderList, 'wishlist' => $wishlistSize];
     }
 }
