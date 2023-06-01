@@ -6,8 +6,7 @@
         <parameters>
             <parameter name="price_difference" xsi:type="text" required="true" visible="true">
                 <label translate="true">Разница в цене (доллары)</label>
-                <visible>true</visible>
-                <sort_order>10</sort_order>
+                <value>16</value>
             </parameter>
         </parameters>
     </widget>
