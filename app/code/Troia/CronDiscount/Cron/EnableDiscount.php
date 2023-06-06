@@ -18,9 +18,20 @@ class EnableDiscount
         $this->catalogPriceRule = $catalogPriceRule;
     }
 
+    public function execute()
+    {
+        $start = $this->scopeConfig->getValue('cron_discount/general/start');
+        $end = $this->scopeConfig->getValue('cron_discount/general/end');
+        $now = date('H', time());
+        if($now >= $start && $now <= $end){
+            $this->enable();
+        } else {
+            $this->disable();
+        }
+    }
+
     public function enable()
     {
-
         $catalogRule = $this->catalogPriceRule->create()->load(2);
         $catalogRule->setIsActive(true);
         $catalogRule->save();

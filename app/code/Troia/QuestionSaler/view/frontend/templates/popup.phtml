@@ -1,0 +1,28 @@
+<h1>
+    <div class="subscribe-button-wrapper">
+        <a class="action-print" href="#" id="click-me">Custom popup</a>
+    </div>
+</h1>
+<div class="popup-modal">
+
+<!--     if not using Ajax then please give the action controller URL here.-->
+
+    <form action="#" class="popup-form-data-submit">
+        <label>
+            Name:
+            <input type="text" name="name" id="name1">
+        </label>
+        <label>
+            Content Invoice:
+            <textarea name="content"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script type="text/x-magento-init">
+     {
+        "*": {
+            "Troia_QuestionSaler/js/popup": { }
+        }
+    }
+</script>
