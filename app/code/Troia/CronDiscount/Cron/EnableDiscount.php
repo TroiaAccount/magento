@@ -3,34 +3,33 @@
 
 namespace Troia\CronDiscount\Cron;
 
-use Magento\Config\Model\ResourceModel\Config;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\CatalogRule\Model\RuleFactory as CatalogPriceRule;
+
 
 class EnableDiscount
 {
 
-    protected $config, $scopeConfig, $configCache;
+    protected $scopeConfig, $catalogPriceRule;
 
-    public function __construct(Config $config, ScopeConfigInterface $scopeConfig)
+    public function __construct(ScopeConfigInterface $scopeConfig, CatalogPriceRule $catalogPriceRule)
     {
         $this->scopeConfig = $scopeConfig;
-        $this->config = $config;
+        $this->catalogPriceRule = $catalogPriceRule;
     }
 
-    /**
-     * Cronjob Description
-     *
-     * @return void
-     */
-    public function start(): void
+    public function enable()
     {
-        $start = $this->scopeConfig->getValue('cron_discount/general/start');
-        $end = $this->scopeConfig->getValue('cron_discount/general/end');
-        $now = date('H', time());
-        if($now >= $start && $now <= $end){
-            $this->config->saveConfig('cron_discount/general/enable', 1);
-        } else {
-            $this->config->saveConfig('cron_discount/general/enable', 0);
-        }
+
+        $catalogRule = $this->catalogPriceRule->create()->load(2);
+        $catalogRule->setIsActive(true);
+        $catalogRule->save();
+    }
+
+    public function disable()
+    {
+        $catalogRule = $this->catalogPriceRule->create()->load(2);
+        $catalogRule->setIsActive(false);
+        $catalogRule->save();
     }
 }

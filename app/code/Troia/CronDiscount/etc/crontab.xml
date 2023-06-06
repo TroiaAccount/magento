@@ -3,8 +3,13 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
         <job name="troia_crondiscount_enable_discount" instance="Troia\CronDiscount\Cron\EnableDiscount"
-             method="execute">
-            <schedule>* * * * *</schedule>
+             method="enable">
+            <schedule>0 8 * * *</schedule>
+        </job>
+
+        <job name="troia_crondiscount_disable_discount" instance="Troia\CronDiscount\Cron\EnableDiscount"
+             method="disable">
+            <schedule>0 10 * * *</schedule>
         </job>
     </group>
 </config>
