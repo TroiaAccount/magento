@@ -6,7 +6,6 @@ define(['jquery', 'Magento_Ui/js/modal/modal'], function ($, modal) {
             popupLink : '.action-print'
         },
         _create: function () {
-            console.log('popup-form-connected');
             this._super();
             let self = this;
             let popupOptions = {
