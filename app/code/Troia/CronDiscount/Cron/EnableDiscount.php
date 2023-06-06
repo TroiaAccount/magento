@@ -33,14 +33,18 @@ class EnableDiscount
     public function enable()
     {
         $catalogRule = $this->catalogPriceRule->create()->load(2);
-        $catalogRule->setIsActive(true);
-        $catalogRule->save();
+        if($catalogRule->getIsActive() == 0){
+            $catalogRule->setIsActive(true);
+            $catalogRule->save();
+        }
     }
 
     public function disable()
     {
         $catalogRule = $this->catalogPriceRule->create()->load(2);
-        $catalogRule->setIsActive(false);
-        $catalogRule->save();
+        if($catalogRule->getIsActive() == 1){
+            $catalogRule->setIsActive(false);
+            $catalogRule->save();
+        }
     }
 }
