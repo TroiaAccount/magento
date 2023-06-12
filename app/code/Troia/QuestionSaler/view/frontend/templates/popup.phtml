@@ -1,48 +1,48 @@
 <button type="button" class="action-print action primary" id="click-me">Seller consultation</button>
 <div class="popup-modal" style="display: none;">
 
-<form class="popup-form-data-submit" action="#" id="question-seller-form" method="post">
-    <fieldset class="fieldset">
-        <legend class="legend"><span>Quest seller</span></legend><br>
-        <div class="field name required">
-            <label class="label" for="name"><span>Name</span></label>
-            <div class="control">
-                <input name="name" id="name" title="Name" class="input-text" type="text" required>
+    <form class="popup-form-data-submit" action="#" id="question-seller-form" method="post">
+        <fieldset class="fieldset">
+            <legend class="legend"><span>Quest seller</span></legend><br>
+            <div class="field name required">
+                <label class="label" for="name"><span>Name</span></label>
+                <div class="control">
+                    <input name="name" id="name" title="Name" class="input-text" type="text" required>
+                </div>
+            </div>
+            <div class="field email">
+                <label class="label" for="email"><span>Email</span></label>
+                <div class="control">
+                    <input name="email" id="email" title="Email" class="input-text" type="email">
+                </div>
+            </div>
+            <div class="field telephone required">
+                <label class="label" for="telephone"><span>Phone Number</span></label>
+                <div class="control">
+                    <input type="text" name="telephone" id="telephone" class="input-text" data-validate="{required:true}" required />
+                </div>
+            </div>
+            <div class="field comment required">
+                <label class="label" for="comment">
+                    <span>What’s on your mind?</span>
+                </label>
+                <div class="control">
+                    <textarea name="comment" id="comment" title="What’s on your mind?" class="input-text" cols="5" rows="3" required></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">
+                <input type="hidden" name="hideit" id="hideit" value="">
+                <button type="submit" title="Submit" class="action submit primary">
+                    <span>Submit</span>
+                </button>
             </div>
         </div>
-        <div class="field email">
-            <label class="label" for="email"><span>Email</span></label>
-            <div class="control">
-                <input name="email" id="email" title="Email" class="input-text" type="email">
-            </div>
-        </div>
-        <div class="field telephone required">
-            <label class="label" for="telephone"><span>Phone Number</span></label>
-            <div class="control">
-                <input name="telephone" id="telephone" title="Phone Number" value="" class="input-text" type="tel" required>
-            </div>
-        </div>
-        <div class="field comment required">
-            <label class="label" for="comment">
-                <span>What’s on your mind?</span>
-            </label>
-            <div class="control">
-                <textarea name="comment" id="comment" title="What’s on your mind?" class="input-text" cols="5" rows="3" required></textarea>
-            </div>
-        </div>
-            </fieldset>
-    <div class="actions-toolbar">
-        <div class="primary">
-            <input type="hidden" name="hideit" id="hideit" value="">
-            <button type="submit" title="Submit" class="action submit primary">
-                <span>Submit</span>
-            </button>
-        </div>
-    </div>
-</form>
+    </form>
 </div>
 <script type="text/x-magento-init">
-     {
+    {
         "*": {
             "Troia_QuestionSaler/js/popup": { }
         }
