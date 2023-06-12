@@ -31,7 +31,7 @@ define(['jquery', 'Magento_Ui/js/modal/modal', 'mage/validation'], function ($, 
                 rules: {
                     telephone: {
                         required: true,
-                        pattern: '^\\+380\\d{9}$'
+                        pattern: '^\\+380\\s\\d{2}\\s\\d{3}-\\d{2}-\\d{2}$'
                     },
                     name: {
                         required: true,
@@ -45,7 +45,7 @@ define(['jquery', 'Magento_Ui/js/modal/modal', 'mage/validation'], function ($, 
                 messages: {
                     telephone: {
                         required: 'Номер телефону є обов\'язковим полем.',
-                        pattern: 'Будь ласка, введіть дійсний номер телефону. Наприклад, +380ddddddddd.'
+                        pattern: 'Будь ласка, введіть номер телефону у форматі "+380 dd ddd-dd-dd".'
                     },
                     name: {
                         required: 'Ім\'я \ є обов\'язковим полем.',
