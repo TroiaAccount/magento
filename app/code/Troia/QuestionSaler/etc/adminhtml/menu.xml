@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Troia_QuestionSaler::question_saler" title="Question Saler" module="Troia_QuestionSaler"
+             sortOrder="10" resource="Troia_QuestionSaler::question_saler"/>
+        <add id="Troia_QuestionSaler::grid" title="Manage Blog Records" module="Troia_QuestionSaler" sortOrder="9" parent="Troia_QuestionSaler::question_saler" action="troia_questionsaler/index/index"
+             resource="Troia_QuestionSaler::question_saler"/>
+    </menu>
+</config>

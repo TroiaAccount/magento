@@ -19,14 +19,6 @@ define(['jquery', 'Magento_Ui/js/modal/modal', 'mage/validation'], function ($, 
                 $(self.options.PopupForms).modal('openModal');
             });
 
-            // $(self.options.PopupForms).on('submit',function (event) {
-            //     event.preventDefault();
-
-            //     alert('submited');
-            //     // use ajax function to save the data
-            //     // console.log($('.subscribe-form-data').serializeArray());
-            // })
-
             $(self.options.PopupForms).mage('validation', {
                 rules: {
                     telephone: {
@@ -59,35 +51,25 @@ define(['jquery', 'Magento_Ui/js/modal/modal', 'mage/validation'], function ($, 
 
                 submitHandler: function (form) {
                     var formData = $(form).serialize();
-
                     $.ajax({
-                        url: 'your_ajax_endpoint_url',
+                        url: $(form).attr('action'),
                         type: 'POST',
                         data: formData,
                         dataType: 'json',
-                        beforeSend: function () {
-                            // Виконується перед відправкою AJAX-запиту
-                            // Можна відобразити завантажувач або індікатор процесу
-                        },
+
                         success: function (response) {
-                            // Обробка успішної відповіді від сервера
-                            // Можна відобразити повідомлення про успішну відправку або виконати додаткові дії
-                            alert({
-                                title: 'Success',
-                                content: 'Form submitted successfully.'
-                            });
+                            if(response.status === false){
+                                alert(response.error)
+                            }
                         },
                         error: function (xhr, status, error) {
-                            // Обробка помилки під час відправки AJAX-запиту
-                            // Можна відобразити повідомлення про помилку або виконати додаткові дії
                             alert({
                                 title: 'Error',
                                 content: 'An error occurred while submitting the form.'
                             });
                         },
                         complete: function () {
-                            // Виконується після успішного або неуспішного виконання AJAX-запиту
-                            // Можна виконати додаткові дії, такі як очищення форми або оновлення сторінки
+                            $(self.options.PopupForms).modal('hideModal');
                         }
                     });
                 }
