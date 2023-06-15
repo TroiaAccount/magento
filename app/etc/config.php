@@ -373,7 +373,7 @@ return [
         'Perspective_ProductQty' => 0,
         'Perspective_Sales' => 0,
         'Perspective_Social' => 0,
-        'Perspective_TestGridUi' => 1,
+        'Perspective_TestGridUi' => 0,
         'Perspective_TutorialEntity' => 0,
         'Perspective_ViewModel' => 0,
         'RH_UiExample' => 0,

@@ -69,7 +69,7 @@ define(['jquery', 'Magento_Ui/js/modal/modal', 'mage/validation'], function ($, 
                             });
                         },
                         complete: function () {
-                            $(self.options.PopupForms).modal('hideModal');
+                            $(self.options.PopupForms).modal('closeModal');
                         }
                     });
                 }
@@ -79,3 +79,4 @@ define(['jquery', 'Magento_Ui/js/modal/modal', 'mage/validation'], function ($, 
     return $.sathya.customWidgetPopupForm;
 
 });
+

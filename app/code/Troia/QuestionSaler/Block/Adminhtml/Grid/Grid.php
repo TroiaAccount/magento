@@ -13,12 +13,12 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {
 
     /**
-     * @var \Perspective\TestGridUi\Model\Status
+     * @var \Troia\QuestionSaler\Model\Options
      */
     protected $options;
 
     /**
-     * @var \Perspective\TestGridUi\Model\BlogFactory
+    * @var \Troia\QuestionSaler\Model\QuestionSallerFactory
      */
     protected $questionFactory;
 
@@ -125,16 +125,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
 
-//        $this->addColumn(
-//            'status',
-//            [
-//                'header' => __('Status'),
-//                'index' => 'status',
-//                'type' => 'options',
-//                'options' => $this->_status->getOptionArray(),
-//            ]
-//        );
-
 
         $block = $this->getLayout()->getBlock('grid.bottom.links');
 
@@ -146,31 +136,11 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     }
 
     /**
-     * @return $this
-     */
-    protected function _prepareMassaction()
-    {
-        $this->setMassactionIdField('id');
-        $this->getMassactionBlock()->setFormFieldName('id');
-
-        $this->getMassactionBlock()->addItem(
-            'delete',
-            [
-                'label' => __('Delete'),
-                'url' => $this->getUrl('blog/*/massDelete'),
-                'confirm' => __('Are you sure?'),
-            ]
-        );
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getGridUrl()
     {
-        return $this->getUrl('blog/*/grid', ['_current' => true]);
+        return $this->getUrl('troia_questionsaler/*/grid', ['_current' => true]);
     }
 
     /**
@@ -178,6 +148,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
      */
     public function getRowUrl($row)
     {
-        return $this->getUrl('blog/*/edit', ['id' => $row->getId()]);
+        return $this->getUrl('troia_questionsaler/*/edit', ['id' => $row->getId()]);
     }
 }

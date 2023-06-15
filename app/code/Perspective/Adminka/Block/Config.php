@@ -10,7 +10,7 @@ class Config extends Template
 {
     protected $helper;
 
-    public function __construct(Context $context, array $data = [], Data $helper)
+    public function __construct(Context $context, Data $helper, array $data = [])
     {
         $this->helper = $helper ?: \Magento\Framework\App\ObjectManager::getInstance()->get(\Perspective\Adminka\Helper\Data::class);
         parent::__construct($context, $data);
